@@ -38,7 +38,14 @@ async fn main(spawner: Spawner) -> ! {
     //--------------------------------------------
     loop {
         Timer::after_millis(1000).await;
-        println!("tick");
+
+        //---------------------------------------------
+        // Modified by KotukoHumibana
+        // Orignal Work by ch32-hal
+
+        //println!("tick");
+
+        //--------------------------------------------
     }
 }
 {%- else -%}
@@ -63,7 +70,13 @@ fn main() -> ! {
     loop {
         led.toggle();
         delay.delay_ms(1000);
-        hal::println!("toggle!");
+        //---------------------------------------------
+        // Modified by KotukoHumibana
+        // Orignal Work by ch32-hal
+        
+        //hal::println!("toggle!");
+
+        //--------------------------------------------
     }
 }
 {%- endif %}
