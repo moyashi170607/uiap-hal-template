@@ -28,9 +28,14 @@ async fn blink(pin: Peri<'static, AnyPin>, interval_ms: u64) {
 async fn main(spawner: Spawner) -> ! {
     ch32_hal::debug::SDIPrint::enable();
     let p = ch32_hal::init(ch32_hal::Config::default());
+    //---------------------------------------------
+    // Modified by KotukoHumibana
+    // Orignal Work by ch32-hal
 
     // Adjust the LED GPIO according to your board
-    spawner.spawn(blink(p.PA0.into(), 1000)).unwrap();
+    spawner.spawn(blink(p.PC0.into(), 1000)).unwrap();
+
+    //--------------------------------------------
     loop {
         Timer::after_millis(1000).await;
         println!("tick");
