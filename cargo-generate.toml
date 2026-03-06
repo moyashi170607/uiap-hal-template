@@ -6,6 +6,18 @@ ignore = [".git", ".github", "README.md"]
 pre = ["pre-script.rhai"]
 post = ["post-script.rhai"]
 
+#-------------------------------------------------------
+# Modified by KotukoHumibana
+# Orignal Work by ch32-hal
+
+[placeholders.os]
+type = "string"
+prompt = "Which OS are you using?"
+choices = ["windows", "linux", "macos"]
+default = "windows"
+
+#-------------------------------------------------------
+
 # Embassy option
 [placeholders.embassy]
 type = "bool"

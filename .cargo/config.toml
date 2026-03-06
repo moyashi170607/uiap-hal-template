@@ -12,8 +12,11 @@ target = "{{ target }}"
 # Modified by KotukoHumibana
 # Orignal Work by ch32-hal
 
-#runner = "wlink -v flash --enable-sdi-print --watch-serial"
-runner = "./flash.bat"
+{% if os == "windows" -%}
+runner = "./flash/flash.bat"
+{%- elsif os == "linux" or os == "macos" -%}
+runner = "sh ./flash/flash.sh"
+{%- endif %}
 #--------------------------------------------------------
 
 {% if target == "riscv32ec-unknown-none-elf" or target == "riscv32imfc-unknown-none-elf" -%}
