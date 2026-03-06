@@ -47,8 +47,14 @@ fn main() -> ! {
     let p = hal::init(hal::Config::default());
     let mut delay = Delay;
 
+    //---------------------------------------------
+    // Modified by KotukoHumibana
+    // Orignal Work by ch32-hal
+
     // Adjust the LED GPIO according to your board
-    let mut led = Output::new(p.PA0, Level::Low, Default::default());
+    let mut led = Output::new(p.PC0, Level::Low, Default::default());
+
+    //--------------------------------------------
     loop {
         led.toggle();
         delay.delay_ms(1000);
