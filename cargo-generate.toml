@@ -22,7 +22,12 @@ default = "windows"
 [placeholders.embassy]
 type = "bool"
 prompt = "Enable embassy (async) support?"
+#-------------------------------------------------------
+# Modified by KotukoHumibana
+# Orignal Work by ch32-hal
 default = false
+#-------------------------------------------------------
+
 
 [placeholders.mcu_family]
 type = "string"
