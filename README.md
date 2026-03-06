@@ -1,4 +1,4 @@
-# Rust ch32-hal-template 
+# Rust uiap-hal-template 
 
 A template for use with [cargo-generate](https://github.com/cargo-generate/cargo-generate) to create applications targeting WCH's line of MCU.
 
