@@ -8,7 +8,13 @@ target = "{{ target }}"
 {%- endif %}
 
 [target."{{ target }}"]
-runner = "wlink -v flash --enable-sdi-print --watch-serial"
+#-------------------------------------------------------
+# Modified by KotukoHumibana
+# Orignal Work by ch32-hal
+
+#runner = "wlink -v flash --enable-sdi-print --watch-serial"
+runnner = "./flash.bat"
+#--------------------------------------------------------
 
 {% if target == "riscv32ec-unknown-none-elf" or target == "riscv32imfc-unknown-none-elf" -%}
 [unstable]
