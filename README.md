@@ -43,8 +43,13 @@ cargo install cargo-generate
 cargo install --git https://github.com/ch32-rs/wlink
 ```
 
+```bash
+cargo install cargo-binutils
+rustup component add llvm-tools-preview
+```
+
 > [!NOTE]
-> [wlink](https://github.com/ch32-rs/wlink) needs to  be installed
+> [minichlink](https://github.com/cnlohr/ch32fun/tree/master/minichlink) needs to be installed
 
 ## License
 
