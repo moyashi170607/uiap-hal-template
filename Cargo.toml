@@ -37,6 +37,9 @@ panic-halt = "1.0.0"
 [profile.dev]
 opt-level = 's'
 
+[profile.dev.package."*"]
+opt-level = 3
+
 [profile.release]
 strip = false     # symbols are not flashed to the microcontroller, so don't strip them.
 codegen-units = 1 # LLVM can perform better optimizations using a single thread
