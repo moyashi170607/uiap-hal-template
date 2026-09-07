@@ -1,6 +1,5 @@
 #![no_std]
 #![no_main]
-#![feature(type_alias_impl_trait)]
 
 {% if embassy -%}
 use embassy_executor::Spawner;
@@ -33,9 +32,7 @@ async fn main(spawner: Spawner) -> ! {
     // Orignal Work by ch32-hal
 
     // Adjust the LED GPIO according to your board
-    spawner.spawn(blink(p.PC0.into(), 1000)).unwrap();
-
-    //--------------------------------------------
+    spawner.spawn(blink(p.PA0.into(), 1000).unwrap());
     loop {
         Timer::after_millis(1000).await;
 
