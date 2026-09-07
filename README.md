@@ -9,7 +9,7 @@ A template for use with [cargo-generate](https://github.com/cargo-generate/cargo
 To generate a project using this template:
 
 ```bash
-cargo generate ch32-rs/ch32-hal-template
+cargo generate moyashi170607/uiap-hal-template
 ```
 
 If `cargo generate` is not installed:
